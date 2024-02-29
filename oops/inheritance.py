@@ -5,7 +5,7 @@ class A:
         self.phone = phone
 
     def printDetails(self):
-        return f"Name: {self.name}, Age: {self.age}, Phone: {self.phone}"
+        print("parent")
 
 
 # Inheritance
@@ -19,13 +19,14 @@ class Student(A):
         self.roll_number = roll_number
 
     def printDetails(self):
+        super().printDetails()
         return f"Name: {self.name}, Age: {self.age}, Phone: {self.phone}, Roll Number: {self.roll_number}"
 
 
-obj_B = B("ab", 25, 8820239869)
-print(obj_B.name)  # Accessing inherited attribute
-print(obj_B.age)  # Accessing inherited attribute
-print(obj_B.printDetails())  # Accessing inherited method
+# obj_B = B("ab", 25, 8820239869)
+# print(obj_B.name)  # Accessing inherited attribute
+# print(obj_B.age)  # Accessing inherited attribute
+# print(obj_B.printDetails())  # Accessing inherited method
 
 obj_Student = Student("John", 20, 1234567890, "A1234")
 print(obj_Student.name)  # Accessing inherited attribute

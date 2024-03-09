@@ -1,3 +1,6 @@
+from typing import Optional
+
+
 class Node:
     
     def __init__(self,data) :
@@ -37,7 +40,20 @@ class LinkedList:
         
         temp.next=None
             
+     # get middle node of linkedList using slow and fast pointer
+    def middleNode(self, head: Optional[Node]) -> Optional[Node]:
+        if head is None or head.next is None:
+            return head
         
+        fast=head
+        slow=head
+
+        while fast is not None and fast.next is not None:
+            fast=fast.next.next
+            slow=slow.next
+
+        return slow
+           
              
     # Method to print the linked list     
     def print_List(self):
@@ -72,6 +88,8 @@ if __name__ == "__main__":
    
     linkedList.delete_from_end()
     linkedList.print_List()
+    middleNode=linkedList.middleNode(linkedList.head)
+    print(middleNode.data)
            
         
                     

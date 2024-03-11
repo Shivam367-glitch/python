@@ -1,7 +1,7 @@
 import math
 import sys
 
-min_int_value = -sys.maxsize - 1
+min_int_value = -math.inf
 print(min_int_value)
 
 list =[10,20,1,211,221,32,1,22,-1]
@@ -13,4 +13,4 @@ for x in list:
 print(min_int_value)
 
 
-print(min(list))
+print(max(list))

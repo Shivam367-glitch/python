@@ -1,7 +1,7 @@
 import numpy as np
 
 
-arr = np.array(['a',1, 0, 3])
+arr = np.array([9,1, 0, 3])
 
 newarr = arr.astype(bool)
 
